@@ -33,7 +33,7 @@ const BufferScreen = () => {
     const location = `location=${lat},${long}`;
     const radius = '&radius=2000';
     const type = '&keyword=restaurant';
-    const key = '&key=AIzaSyBD4DovRMzWASZC0KfN3vNVCufux2WTgT8';
+    const key = '&key=<API KEY>';
     const restaurantSearchUrl = url + location + radius + type + key;
     fetch(restaurantSearchUrl)
       .then(response => response.json())
@@ -67,7 +67,7 @@ const BufferScreen = () => {
     const furl = 'https://maps.googleapis.com/maps/api/distancematrix/json?';
     const origins = `origins=${lat},${long}`;
     const destinations = `&destinations=place_id:${placeID}`;
-    const key = '&key=AIzaSyBD4DovRMzWASZC0KfN3vNVCufux2WTgT8';
+    const key = '&key=<API KEY>';
     const restaurantSearchUrl = furl + origins + destinations + key;
     fetch(restaurantSearchUrl)
       .then(response => response.json())
